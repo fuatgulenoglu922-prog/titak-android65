@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Başlık -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🪙 (efe)"
+                android:textSize="28sp"
+                android:textColor="@color/tiktok_pink"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textColor="@color/text_dim" />
+        </LinearLayout>
+
+        <!-- İzin 1: Ekran Üstü -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/card_warn"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/icon_overlay"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_warning"
+                    android:layout_marginEnd="14dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ekran Üstü İzni"
+                        android:textColor="@color/text_primary"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_overlay_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="❌ İzin Gerekli — Dokunun"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- İzin 2: Erişilebilirlik -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_accessibility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/card_warn"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/icon_accessibility"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_warning"
+                    android:layout_marginEnd="14dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Erişilebilirlik Servisi"
+                        android:textColor="@color/text_primary"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_accessibility_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="❌ Kapalı — Dokunun"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Başlat Butonu -->
+        <Button
+            android:id="@+id/btn_start_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="🚀 Botu Başlat"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/tiktok_pink"
+            android:textColor="@color/white"
+            android:stateListAnimator="@null"
+            style="@style/Widget.MaterialComponents.Button" />
+
+        <!-- Açıklama -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="ℹ️ Bot başladıktan sonra TikTok'u aç. Uygulama arka planda çalışır ve ekranın üstünde kayan kontrol paneli görünür.\n\nTikTok LIVE'da sandık belirdiğinde bot otomatik olarak tıklar."
+            android:textColor="@color/text_dim"
+            android:textSize="12sp"
+            android:lineSpacingExtra="4dp"
+            android:padding="12dp"
+            android:background="@color/card_bg"
+            android:backgroundTint="@color/card_bg" />
+
+    </LinearLayout>
+</ScrollView>

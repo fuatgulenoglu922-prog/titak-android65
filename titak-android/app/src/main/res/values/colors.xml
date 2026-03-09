@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Ana renkler -->
+    <color name="tiktok_pink">#FE2C55</color>
+    <color name="tiktok_cyan">#25F4EE</color>
+
+    <!-- Arka planlar -->
+    <color name="bg_dark">#0A0A18</color>
+    <color name="card_bg">#111124</color>
+    <color name="stat_bg">#0D0D20</color>
+    <color name="overlay_header">#0F0F22</color>
+
+    <!-- Durum renkleri -->
+    <color name="card_ok">#0D2A1A</color>
+    <color name="card_warn">#2A1A0D</color>
+
+    <!-- Metin renkleri -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#AAAAAA</color>
+    <color name="text_dim">#555566</color>
+
+    <!-- Diğer -->
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+</resources>

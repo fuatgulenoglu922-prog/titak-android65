@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeWindowContentChanged|typeWindowStateChanged|typeViewScrolled|typeViewClicked"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagReportViewIds|flagRetrieveInteractiveWindows|flagRequestFilterKeyEvents"
+    android:canPerformGestures="true"
+    android:canRetrieveWindowContent="true"
+    android:description="@string/accessibility_desc"
+    android:notificationTimeout="150"
+    android:packageNames="com.zhiliaoapp.musically,com.ss.android.ugc.trill,com.ss.android.ugc.aweme,com.zhiliaoapp.musically.go"
+    android:settingsActivity=".MainActivity" />

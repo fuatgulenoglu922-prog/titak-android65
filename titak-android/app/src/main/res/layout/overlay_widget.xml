@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ekran üstü kayan widget layout -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="220dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/overlay_bg"
+    android:elevation="16dp">
+
+    <!-- Başlık / Header (Sürüklenebilir) -->
+    <LinearLayout
+        android:id="@+id/ov_header"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="8dp"
+        android:background="@color/overlay_header">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🪙 (efe)"
+            android:textColor="@color/tiktok_cyan"
+            android:textStyle="bold"
+            android:textSize="13sp" />
+
+        <ImageButton
+            android:id="@+id/btn_ov_minimize"
+            android:layout_width="30dp"
+            android:layout_height="26dp"
+            android:text="─"
+            android:textColor="@color/text_dim"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_minimize"
+            android:scaleType="centerInside"
+            android:padding="4dp" />
+
+        <ImageButton
+            android:id="@+id/btn_ov_power"
+            android:layout_width="30dp"
+            android:layout_height="26dp"
+            android:background="@drawable/btn_power_bg"
+            android:src="@drawable/ic_play"
+            android:scaleType="centerInside"
+            android:padding="4dp"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+
+    <!-- Body (Küçültülebilir) -->
+    <LinearLayout
+        android:id="@+id/ov_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- İstatistikler -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="8dp">
+
+            <!-- Oturum -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/stat_bg"
+                android:padding="6dp"
+                android:layout_marginEnd="4dp">
+                <TextView
+                    android:id="@+id/tv_ov_session"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/tiktok_cyan"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OTURUM"
+                    android:textColor="@color/text_dim"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <!-- Toplam -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/stat_bg"
+                android:padding="6dp">
+                <TextView
+                    android:id="@+id/tv_ov_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/tiktok_cyan"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOPLAM"
+                    android:textColor="@color/text_dim"
+                    android:textSize="8sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Durum -->
+        <TextView
+            android:id="@+id/tv_ov_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Durduruldu"
+            android:textColor="@color/text_secondary"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:padding="4dp" />
+
+        <!-- Son Log -->
+        <TextView
+            android:id="@+id/tv_ov_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/text_dim"
+            android:textSize="9sp"
+            android:maxLines="2"
+            android:ellipsize="start"
+            android:singleLine="false"
+            android:padding="2dp" />
+    </LinearLayout>
+</LinearLayout>
